@@ -169,10 +169,8 @@ public class MainActivity extends Activity {
                     id = p.id;
             User.idCounter = id;
             MainActivity.getBasicProspectInfo();
-            Toast.makeText(context, "Prospects successfully read!", Toast.LENGTH_SHORT).show();
             ois.close();
         } catch (Exception ex) {
-            Toast.makeText(context, "Prospects not read", Toast.LENGTH_SHORT).show();
             ex.printStackTrace();
             return users;
         }
