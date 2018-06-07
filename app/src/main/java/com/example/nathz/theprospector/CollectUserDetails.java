@@ -183,8 +183,8 @@ public class CollectUserDetails extends Activity {
     }
 
     private boolean validateUserData() {
-        if (firstNameField.getText()!=null && lastNameField.getText()!=null && firstNameField.getText().toString().isEmpty()!=true && lastNameField.getText().toString().isEmpty()!=true){
-            if (primaryContactDataField.getText()!=null && primaryPreference!=-1 && primaryContactDataField.getText().toString().isEmpty()!=true){
+        if (firstNameField.getText()!=null && lastNameField.getText()!=null && !firstNameField.getText().toString().isEmpty() && !lastNameField.getText().toString().isEmpty()){
+            if (primaryContactDataField.getText()!=null && primaryPreference!=-1 && !primaryContactDataField.getText().toString().isEmpty()){
                 return true;
             }else if(!tryNewEntry)
                 Toast.makeText(this, primaryContactDataField.getHint().toString()+" is missing!", Toast.LENGTH_SHORT).show();
