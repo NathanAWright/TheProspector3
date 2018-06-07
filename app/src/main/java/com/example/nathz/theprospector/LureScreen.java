@@ -209,5 +209,6 @@ public class LureScreen extends Activity {
     public void goToEndOfSurveyScreen(View view){
         Intent endOfSurvey = new Intent(this, EndOfSurvey.class);
         startActivity(endOfSurvey);
+        finish();
     }
 }
