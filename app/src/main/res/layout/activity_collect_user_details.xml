@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#0099cc"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".CollectUserDetails">
+
+    <ScrollView android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/preferred_form_of_contact"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:layout_marginTop="40dp"
+                android:keepScreenOn="true"
+                android:textColor="#333"
+                android:textSize="30sp"
+                android:textStyle="bold"/>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="40dp"
+                android:layout_gravity="center">
+
+            </android.support.v4.view.ViewPager>
+
+            <TextView
+                android:id="@+id/mainContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:layout_marginTop="20dp"
+                android:keepScreenOn="true"
+                android:textColor="#333"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Primary Choice"/>
+
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager2"
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="40dp"
+                android:layout_gravity="center">
+
+            </android.support.v4.view.ViewPager>
+
+            <TextView
+                android:id="@+id/secondaryContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:layout_marginTop="20dp"
+                android:keepScreenOn="true"
+                android:textColor="#333"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Secondary Choice (Optional)"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center">
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/firstNameField"
+                    android:inputType="textPersonName"
+                    android:textColor="#333"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:hint="First Name"
+                    android:backgroundTint="#33ddff"/>
+                <EditText
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:inputType="textPersonName"
+                    android:id="@+id/lastNameField"
+                    android:textColor="#333"
+                    android:textSize="20sp"
+                    android:hint="Last Name"
+                    android:backgroundTint="#33ddff"/>
+            </LinearLayout>
+            <EditText
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:id="@+id/primaryContactDataField"
+                android:backgroundTint="#33ddff"
+                android:textColor="#333"
+                android:textSize="20sp"
+                android:visibility="invisible"/>
+
+            <EditText
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/secondaryContactDataField"
+                android:backgroundTint="#33ddff"
+                android:textColor="#333"
+                android:textSize="20sp"
+                android:clickable="false"
+                android:visibility="invisible"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:id="@+id/submitButtons"
+                android:layout_gravity="center_horizontal"
+                android:visibility="invisible">
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/home"
+                    android:scaleType="fitXY"
+                    android:clickable="false"
+                    android:onClick="returnToMainScreen"
+                    android:id="@+id/homeButton"
+                    android:contentDescription="@string/cancel" />
+
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/newEntry"
+                    android:text="@string/new_entry"
+                    android:textColor="#ddd"
+                    android:backgroundTint="#333"
+                    android:textSize="20sp"
+                    android:onClick="startNewEntry"/>
+
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/finishButton"
+                    android:textColor="#333"
+                    android:backgroundTint="#7f7"
+                    android:text="@string/finish"
+                    android:textSize="20sp"
+                    android:onClick="endOfSurveyScreen"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/majorpipslogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:alpha=".1"
+        android:src="@drawable/majorpips_logo" />
+</FrameLayout>

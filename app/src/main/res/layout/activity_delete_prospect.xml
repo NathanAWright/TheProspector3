@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DeleteProspect"
+    android:orientation="vertical">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/trashsymbol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:alpha=".07"
+            android:src="@drawable/garbagesymbol"
+            android:contentDescription="@string/Maaajor_pips" />
+
+        <TextView
+            android:id="@+id/sureToDeleteQuery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text="@string/are_you_sure_you_want_to_delete"
+            android:textAlignment="center"
+            android:textSize="22sp" />
+
+        <TextView
+            android:id="@+id/prospectInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="135dp"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            android:textColor="#c00" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="95dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:onClick="finishActivity"
+                android:text="@string/cancel" />
+
+            <ImageButton
+                android:layout_width="71dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:onClick="deleteProspect"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_delete"
+                android:contentDescription="@string/Maaajor_pips" />
+        </LinearLayout>
+
+    </FrameLayout>
+</RelativeLayout>

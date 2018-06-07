@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.nathz.theprospector">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/theprospectorlogo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/theprospectorlogo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CollectRegion"
+            android:label="@string/title_activity_survey_screen1" />
+        <activity
+            android:name=".LureScreen"
+            android:label="@string/title_activity_lure_screen" />
+        <activity
+            android:name=".EndOfSurvey"
+            android:label="@string/title_activity_end_of_survey" />
+        <activity
+            android:name=".RateUserInterest"
+            android:label="@string/title_activity_rate_user_interest" />
+        <activity
+            android:name=".CollectUserDetails"
+            android:label="@string/title_activity_collect_user_details"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".AdministratorPage"
+            android:label="@string/title_activity_administrator" />
+        <activity
+            android:name=".CreateAdmin"
+            android:label="@string/title_activity_create_admin" />
+        <activity
+            android:name=".AdminLogin"
+            android:label="@string/title_activity_admin_login" />
+        <activity
+            android:name=".Settings"
+            android:label="@string/title_activity_settings" />
+        <activity
+            android:name=".PopRequestPassword"
+            android:label="@string/title_activity_pop_request_password"
+            android:theme="@style/AppTheme.MainPopWindowStyle" />
+        <activity
+            android:name=".ChangeAdminInfo"
+            android:label="@string/title_activity_change_admin_info"
+            android:theme="@style/AppTheme.MainPopWindowStyle" />
+        <activity
+            android:name=".ProspectDetails"
+            android:label="@string/title_activity_prospect_details_class"
+            android:theme="@style/AppTheme.MainPopWindowStyle"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".DeleteProspect"
+            android:label="@string/title_activity_delete_prospect"
+            android:theme="@style/AppTheme.MainPopWindowStyle" />
+        <activity
+            android:name=".ProspectsRecToDelete"
+            android:label="@string/title_activity_prospects_rec_to_delete"
+            android:theme="@style/AppTheme.MainPopWindowStyle" />
+    </application>
+
+</manifest>

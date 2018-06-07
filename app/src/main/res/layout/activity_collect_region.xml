@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7f7"
+    tools:context=".CollectRegion"
+    android:id="@+id/mainActivityLayout">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top"
+        android:textAlignment="center"
+        android:keepScreenOn="true"
+        android:text="@string/select_region"
+        android:textColor="#444"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:layout_marginTop="35dp"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/regionList"
+        android:layout_gravity="center">
+
+    </ListView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/majorpipslogo"
+        android:alpha=".1"
+        android:src="@drawable/majorpips_logo" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/regionChoice"
+            android:layout_gravity="center"
+            android:keepScreenOn="true"
+            android:textColor="#444"
+            android:textSize="35sp"
+            android:textStyle="bold"/>
+        <Button
+            android:backgroundTint="#0099cc"
+            android:textSize="18sp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/next"
+            android:visibility="invisible"
+            android:onClick="startLureScreen"
+            android:id="@+id/nextButton"
+            tools:ignore="UnusedAttribute" />
+    </LinearLayout>
+
+
+</FrameLayout>

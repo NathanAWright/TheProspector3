@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings"
+    android:background="#7f7">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_title"
+        android:gravity="top"
+        android:textAlignment="center"
+        android:textColor="#444"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:layout_marginTop="35dp"/>
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:onClick="changeAdminInfo"
+        android:text="@string/change_admin_info"
+        android:backgroundTint="#66111fff"
+        tools:ignore="UnusedAttribute" />
+
+    <Spinner
+        android:id="@+id/sortOptionsSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="220dp"
+        android:backgroundTint="#66111fff"
+        android:textAlignment="center"
+        tools:ignore="UnusedAttribute" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sortOptionsSpinner"
+        android:orientation="vertical"
+        android:id="@+id/checkboxes"
+        android:background="@color/black_overlay"
+        android:visibility="invisible">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_marginTop="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="20dp">
+                        <CheckBox
+
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:id="@+id/northBox"
+                            android:layout_height="wrap_content"
+                            android:text="@string/north" />
+                        <CheckBox
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:id="@+id/southBox"
+                            android:layout_height="wrap_content"
+                            android:text="@string/south" />
+
+                        <CheckBox
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:id="@+id/centralBox"
+                            android:layout_height="wrap_content"
+                            android:text="@string/central" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <CheckBox
+
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:id="@+id/eastBox"
+                            android:layout_height="wrap_content"
+                            android:text="@string/east" />
+                        <CheckBox
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:id="@+id/westBox"
+                            android:layout_height="wrap_content"
+                            android:text="@string/west" />
+
+                        <CheckBox
+                            android:layout_gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/tobagoBox"
+                            android:text="@string/tobago" />
+                    </LinearLayout>
+                </LinearLayout>
+                <CheckBox
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/internationalBox"
+                    android:layout_height="wrap_content"
+                    android:text="@string/international" />
+                <Button
+                    android:id="@+id/applyFilter"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|bottom"
+                    android:backgroundTint="#66111fff"
+                    android:visibility="invisible"
+                    android:layout_marginTop="18dp"
+                    android:text="@string/apply_filter"
+                    android:onClick="applyProspectFilter"
+                    android:textColor="#ddd"
+                    tools:ignore="UnusedAttribute" />
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/cardinalPoints"
+                android:layout_width="270dp"
+                android:layout_height="270dp"
+                android:layout_gravity="center"
+                android:alpha=".07"
+                android:src="@drawable/cardinalpoints"
+                android:contentDescription="@string/Maaajor_pips" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="29dp"
+        android:contentDescription="@string/back_to_admin_page"
+        android:onClick="adminPage"
+        android:scaleType="fitXY"
+        android:src="@drawable/backbutton"
+        tools:layout_editor_absoluteX="318dp"
+        tools:layout_editor_absoluteY="501dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="29dp"
+        android:backgroundTint="#fff11111"
+        android:onClick="deleteLingeringProspects"
+        android:text="@string/delete_recommended_prospects"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        tools:ignore="UnusedAttribute" />
+</RelativeLayout>
