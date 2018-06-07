@@ -135,10 +135,8 @@ public class MainActivity extends Activity {
             Administrator.userNameOfficial = admin.userName;
             Administrator.passwordOfficial = admin.password;
             Administrator.adminCreated = true;
-            Toast.makeText(this, "Admin file read successfully!" + admin.userName + admin.password, Toast.LENGTH_SHORT).show();
         } catch (Exception ex) {
             Administrator.adminCreated = false;
-            Toast.makeText(this, "Admin file not read successfully", Toast.LENGTH_SHORT).show();
             ex.printStackTrace();
         }
     }
@@ -149,10 +147,8 @@ public class MainActivity extends Activity {
         Intent adminView;
         if (!Administrator.adminCreated) {
             adminView = new Intent(this, CreateAdmin.class);
-            Toast.makeText(this, "Admin File doesn't exist", Toast.LENGTH_SHORT).show();
         } else {
             adminView = new Intent(this, AdminLogin.class);
-            Toast.makeText(this, "Admin file exists!", Toast.LENGTH_SHORT).show();
         }
         startActivity(adminView);
     }
