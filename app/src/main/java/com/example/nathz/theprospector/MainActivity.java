@@ -93,6 +93,11 @@ public class MainActivity extends Activity {
         adminViewButton.setAnimation(fadeIn2Animation);
     }
 
+    @Override
+    public void onBackPressed() {
+        finish();
+        System.exit(1);
+    }
     public void initDelays() {
         startDelay2 = new Runnable() {
             @Override

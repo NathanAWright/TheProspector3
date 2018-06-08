@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 import android.widget.Toast;
@@ -17,7 +18,7 @@ import android.widget.Toast;
 public class Settings extends Activity {
     Spinner sortOptionsSpinner;
     Adapter adapter;
-    LinearLayout checkboxes;
+    RelativeLayout checkboxes;
     Button applyChangesBtn;
     static boolean central=false, north=false, south=false, east=false, west=false, international=false, tobago=false, region=false, all=true, interestLevel=false, emailOnly=false, whatsappOnly=false, instagramOnly=false, phoneCallOnly=false, timesContacted=false;
 

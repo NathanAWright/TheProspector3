@@ -35,44 +35,47 @@
         android:textStyle="bold"
         android:visibility="invisible" />
 
-    <LinearLayout
+    <!--<LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_below="@+id/honestlyTextView"
-        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true"
         android:layout_marginTop="100dp"
         android:id="@+id/mainSection"
         android:orientation="vertical">
 
-        <SeekBar
-            android:id="@+id/interestSeekBar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:layout_marginEnd="6dp"
-            android:layout_marginStart="6dp"
-            style="@style/Widget.AppCompat.SeekBar.Discrete"/>
+    </LinearLayout>-->
+    <SeekBar
+        android:id="@+id/interestSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginStart="6dp"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"/>
 
-        <TextView
-            android:id="@+id/seekBarProgress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:textColor="#d00"/>
+    <TextView
+        android:id="@+id/seekBarProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:layout_below="@id/interestSeekBar"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#d00"/>
 
-    </LinearLayout>
     <TextView
         android:id="@+id/willContactTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:layout_centerInParent="true"
         android:layout_marginTop="105dp"
         android:textAlignment="center"
-        android:layout_below="@id/mainSection"
+        android:layout_below="@id/seekBarProgress"
         android:textSize="30sp"
         android:textStyle="bold"
         android:textColor="#444"/>
@@ -94,9 +97,8 @@
         android:id="@+id/majorpipslogo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
         android:alpha=".1"
-        android:src="@drawable/majorpips_logo"
-        android:contentDescription="@string/Maaajor_pips" />
+        android:contentDescription="@string/Maaajor_pips"
+        android:src="@drawable/majorpips_logo" />
 </RelativeLayout>

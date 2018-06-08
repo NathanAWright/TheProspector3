@@ -3,7 +3,7 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:textAppearance="?android:attr/textAppearanceLarge"
-    android:paddingLeft="6dip"
+    android:paddingStart="6dip"
     android:minHeight="?android:attr/listPreferredItemHeight"
     android:gravity="center"
     android:textColor="#555"/>

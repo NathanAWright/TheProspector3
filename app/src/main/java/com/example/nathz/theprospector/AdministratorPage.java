@@ -97,7 +97,7 @@ public class AdministratorPage extends Activity implements Serializable {
 
     @Override
     public void onBackPressed() {
-        Toast.makeText(this, "Press logout button to return to the menu.", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Log out to return to main menu.", Toast.LENGTH_SHORT).show();
     }
     private void showRecommendation(int position) {
 
@@ -206,11 +206,12 @@ public class AdministratorPage extends Activity implements Serializable {
         };
         return creator;
     }
+
     public void logOut(View view) {
         Administrator.loggedIn=false;
 
-        startActivity(new Intent(this, MainActivity.class));
         finish();
+        startActivity(new Intent(this, MainActivity.class));
     }
 
     public String getProspectCount(){
@@ -220,7 +221,7 @@ public class AdministratorPage extends Activity implements Serializable {
             s= "No Prospects yet.";
         if (count==1)
             s= count +" Prospect so far.";
-        if (count<5)
+        else if (count<5)
             s= count+" Prospects so far!";
         else s= count+" Prospects!";
 

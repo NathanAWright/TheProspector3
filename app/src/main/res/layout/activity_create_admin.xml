@@ -18,15 +18,16 @@
         android:textColor="#333"
         android:textSize="40sp"
         android:textStyle="bold" />
-
     <ImageView
         android:id="@+id/majorpipslogo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_gravity="center_vertical"
+        android:layout_centerInParent="true"
         android:alpha=".1"
         android:src="@drawable/majorpips_logo"
         android:contentDescription="@string/Maaajor_pips" />
+
     <LinearLayout
         android:layout_width="275dp"
         android:layout_height="200dp"

@@ -19,7 +19,7 @@
             android:layout_gravity="center"
             android:alpha=".07"
             android:src="@drawable/garbagesymbol"
-            android:contentDescription="@string/Maaajor_pips" />
+            android:contentDescription="@string/garbage_image" />
 
         <TextView
             android:id="@+id/sureToDeleteQuery"
@@ -63,7 +63,7 @@
                 android:onClick="deleteProspect"
                 android:scaleType="fitXY"
                 android:src="@drawable/ic_delete"
-                android:contentDescription="@string/Maaajor_pips" />
+                android:contentDescription="@string/delete_prospect" />
         </LinearLayout>
 
     </FrameLayout>

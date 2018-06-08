@@ -121,4 +121,8 @@
     <string name="admin">Admin</string>
     <string name="thank_you">Thank you!</string>
     <string name="change_admin_info">Change Admin Info</string>
+    <string name="secondary_choice_optional">Secondary Choice (Optional)</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="swipe_left">Swipe left.</string>
 </resources>
