@@ -51,7 +51,6 @@ public class CollectRegion extends Activity implements AdapterView.OnItemClickLi
     public void onBackPressed() {
         if (!CollectUserDetails.isNewEntry){
             CollectUserDetails.isNewEntry=false;
-            startActivity(new Intent (this, MainActivity.class));
             finish();
         }
     }
