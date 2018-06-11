@@ -222,7 +222,7 @@ public class AdministratorPage extends Activity implements Serializable {
             s= "No Prospects yet.";
         else if (count==1)
             s= count +" Prospect so far.";
-        else if (count<5)
+        else if (count<8)
             s= count+" Prospects so far!";
         else s= count+" Prospects!";
 
