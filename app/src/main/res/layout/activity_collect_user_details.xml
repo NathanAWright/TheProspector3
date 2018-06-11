@@ -157,20 +157,22 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/newEntry"
                     android:text="@string/new_entry"
-                    android:textColor="#ddd"
+                    android:textColor="#000"
                     android:backgroundTint="#333"
                     android:textSize="20sp"
-                    android:onClick="startNewEntry"/>
+                    android:onClick="startNewEntry"
+                    tools:ignore="UnusedAttribute" />
 
                 <Button
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:id="@+id/finishButton"
-                    android:textColor="#333"
                     android:backgroundTint="#7f7"
+                    android:textColor="#000"
                     android:text="@string/finish"
                     android:textSize="20sp"
-                    android:onClick="endOfSurveyScreen"/>
+                    android:onClick="endOfSurveyScreen"
+                    tools:ignore="UnusedAttribute" />
 
             </LinearLayout>
         </LinearLayout>
@@ -182,5 +184,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:alpha=".1"
-        android:src="@drawable/majorpips_logo" />
+        android:src="@drawable/majorpips_logo"
+        android:contentDescription="@string/Maaajor_pips" />
 </FrameLayout>

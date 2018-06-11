@@ -53,11 +53,12 @@ public class AdministratorPage extends Activity implements Serializable {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.activity_administrator_page);
-
         prospectList = findViewById(R.id.prospectList);
         prospectCount = findViewById(R.id.prospectCount);
-        Administrator.loggedIn=true;
         adapter = new ArrayAdapter<>(this, R.layout.center_align, User.basicProspectInfo);
+
+        Administrator.loggedIn=true;
+
         prospectList.setAdapter(adapter);
         prospectCount.setText(getProspectCount());
 
@@ -219,7 +220,7 @@ public class AdministratorPage extends Activity implements Serializable {
         String s;
         if (count==0)
             s= "No Prospects yet.";
-        if (count==1)
+        else if (count==1)
             s= count +" Prospect so far.";
         else if (count<5)
             s= count+" Prospects so far!";

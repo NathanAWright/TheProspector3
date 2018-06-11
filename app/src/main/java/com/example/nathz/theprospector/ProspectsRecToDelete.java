@@ -3,6 +3,7 @@ package com.example.nathz.theprospector;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.app.Activity;
 import android.util.DisplayMetrics;
@@ -11,6 +12,7 @@ import android.view.animation.BounceInterpolator;
 import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,6 +28,7 @@ public class ProspectsRecToDelete extends Activity {
     SwipeMenuListView deleteList;
     TextView titleExt, title;
     ArrayList<User> toDeleteArrayList= new ArrayList<>();
+    Button confirmDeleteButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +43,7 @@ public class ProspectsRecToDelete extends Activity {
 
         getWindow().setLayout((int) (width *0.9),(int) (height * 0.8));
 
+        confirmDeleteButton = findViewById(R.id.confirmButton);
         title = findViewById(R.id.deleteTheseTitle);
         titleExt = findViewById(R.id.titleExt);
         deleteList = findViewById(R.id.deleteList);
@@ -66,13 +70,15 @@ public class ProspectsRecToDelete extends Activity {
         });
         deleteList.setSwipeDirection(SwipeMenuListView.DIRECTION_LEFT);
         deleteList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
                 showInterestLevel(position);
                 return false;
             }
         });
+        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.KITKAT){
+            confirmDeleteButton.setTextColor(Color.parseColor("#ffffff"));
+        }
     }
 
     private void keepProspect(int position) {
@@ -85,7 +91,6 @@ public class ProspectsRecToDelete extends Activity {
         User.usersArrayList.removeAll(toDeleteArrayList);
         CollectUserDetails.serialiseUsers(this);
         Toast.makeText(this, "Deleting complete.", Toast.LENGTH_SHORT).show();
-//        finish();
         startActivity(new Intent(this, Settings.class));
     }
 

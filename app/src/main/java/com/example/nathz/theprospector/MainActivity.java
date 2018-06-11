@@ -3,6 +3,7 @@ package com.example.nathz.theprospector;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -15,6 +16,7 @@ import android.view.animation.AnimationSet;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,7 +29,7 @@ public class MainActivity extends Activity {
     TextView mpCountDown1, mpCountDown2, mpCountDown3, mpCountDownMp;
     Handler setDelay;
     Runnable startDelay2, startDelay1, startDelayMp, startDelayButtonDisplay;
-    FrameLayout mainActivityLayout;
+    RelativeLayout mainActivityLayout;
     ImageView logo;
     AnimationSet fadeInAnimation = new AnimationSet(true);
     AnimationSet fadeIn2Animation = new AnimationSet(true);
@@ -74,10 +76,14 @@ public class MainActivity extends Activity {
         whatsapp = getString(R.string.whatsapp);
         instagram = getString(R.string.instagram);
 
+        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.KITKAT){
+            adminViewButton.setTextColor(Color.parseColor("#bbbbbb"));
+        }
+
         User.usersArrayList.clear();
         User.usersArrayList.addAll(deserialiseProspects(context));
         initDelays();
-        setDelay.postDelayed(startDelay2, 600);
+        setDelay.postDelayed(startDelay2, 350);
         setDelay.postDelayed(startDelayButtonDisplay, 500);
 
         Animation fadeIn = new AlphaAnimation(0, 1), fadeOut = new AlphaAnimation(1, 0), fadeIn2 = new AlphaAnimation(0, 1);
@@ -95,7 +101,6 @@ public class MainActivity extends Activity {
 
     @Override
     public void onBackPressed() {
-        finish();
         System.exit(1);
     }
     public void initDelays() {
@@ -104,7 +109,7 @@ public class MainActivity extends Activity {
             public void run() {
                 mpCountDown3.setVisibility(View.INVISIBLE);
                 mpCountDown2.setVisibility(View.VISIBLE);
-                setDelay.postDelayed(startDelay1, 500);
+                setDelay.postDelayed(startDelay1, 350);
             }
         };
         startDelay1 = new Runnable() {
@@ -112,7 +117,7 @@ public class MainActivity extends Activity {
             public void run() {
                 mpCountDown2.setVisibility(View.INVISIBLE);
                 mpCountDown1.setVisibility(View.VISIBLE);
-                setDelay.postDelayed(startDelayMp, 500);
+                setDelay.postDelayed(startDelayMp, 350);
             }
         };
         startDelayMp = new Runnable() {

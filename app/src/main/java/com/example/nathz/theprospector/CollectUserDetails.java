@@ -2,6 +2,7 @@ package com.example.nathz.theprospector;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.app.Activity;
@@ -70,6 +71,10 @@ public class CollectUserDetails extends Activity {
         firstNameField = findViewById(R.id.firstNameField);
         lastNameField = findViewById(R.id.lastNameField);
 
+        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.KITKAT){
+            finishButton.setTextColor(Color.parseColor("#333333"));
+            newEntryButton.setTextColor(Color.parseColor("#dddddd"));
+        }
 
         if (isNewEntry)
             homeButton.setClickable(true);

@@ -64,7 +64,7 @@
             android:layout_alignParentBottom="true"
             android:backgroundTint="#600"
             android:onClick="confirmDelete"
-            android:textColor="#fff"
+            android:textColor="#000"
             tools:ignore="UnusedAttribute" />
     </RelativeLayout>
 </LinearLayout>

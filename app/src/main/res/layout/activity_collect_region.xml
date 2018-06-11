@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -18,13 +19,11 @@
         android:textSize="45sp"
         android:textStyle="bold"
         android:layout_marginTop="35dp"/>
-
     <ListView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/regionList"
         android:layout_gravity="center">
-
     </ListView>
 
     <ImageView
@@ -61,6 +60,4 @@
             android:id="@+id/nextButton"
             tools:ignore="UnusedAttribute" />
     </LinearLayout>
-
-
 </FrameLayout>

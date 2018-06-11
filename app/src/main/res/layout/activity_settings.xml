@@ -49,98 +49,102 @@
         android:id="@+id/checkboxes"
         android:layout_centerInParent="true"
         android:visibility="invisible">
-        <LinearLayout
-            android:id="@+id/majorityCheckBoxes"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_centerVertical="true"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="10dp"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:id="@+id/majorityCheckBoxes"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal">
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="20dp"
-                    android:orientation="vertical">
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
 
-                    <CheckBox
-                        android:id="@+id/northBox"
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="@string/north" />
+                        android:layout_marginEnd="20dp"
+                        android:orientation="vertical">
 
-                    <CheckBox
-                        android:id="@+id/southBox"
+                        <CheckBox
+                            android:id="@+id/northBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/north" />
+
+                        <CheckBox
+                            android:id="@+id/southBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/south" />
+
+                        <CheckBox
+                            android:id="@+id/centralBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/central" />
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="@string/south" />
+                        android:orientation="vertical">
 
-                    <CheckBox
-                        android:id="@+id/centralBox"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="@string/central" />
+                        <CheckBox
+                            android:id="@+id/eastBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/east" />
+
+                        <CheckBox
+                            android:id="@+id/westBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/west" />
+
+                        <CheckBox
+                            android:id="@+id/tobagoBox"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/tobago" />
+                    </LinearLayout>
                 </LinearLayout>
 
-                <LinearLayout
+                <CheckBox
+                    android:id="@+id/internationalBox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_gravity="center"
+                    android:text="@string/international" />
 
-                    <CheckBox
-                        android:id="@+id/eastBox"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="@string/east" />
-
-                    <CheckBox
-                        android:id="@+id/westBox"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="@string/west" />
-
-                    <CheckBox
-                        android:id="@+id/tobagoBox"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="@string/tobago" />
-                </LinearLayout>
+                <Button
+                    android:id="@+id/applyFilter"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="18dp"
+                    android:backgroundTint="#66111fff"
+                    android:onClick="applyProspectFilter"
+                    android:text="@string/apply_filter"
+                    android:textColor="#ddd"
+                    android:visibility="invisible"
+                    tools:ignore="UnusedAttribute" />
             </LinearLayout>
-
-            <CheckBox
-                android:id="@+id/internationalBox"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="@string/international" />
-
-            <Button
-                android:id="@+id/applyFilter"
-                android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="18dp"
-                android:backgroundTint="#66111fff"
-                android:onClick="applyProspectFilter"
-                android:text="@string/apply_filter"
-                android:textColor="#ddd"
-                android:visibility="invisible"
-                tools:ignore="UnusedAttribute" />
-        </LinearLayout>
+        </ScrollView>
         <ImageView
             android:id="@+id/cardinalPoints"
             android:layout_width="match_parent"
