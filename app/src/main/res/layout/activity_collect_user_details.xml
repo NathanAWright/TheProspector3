@@ -5,6 +5,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="#0099cc"
     xmlns:tools="http://schemas.android.com/tools"
+    android:focusableInTouchMode="true"
     tools:context=".CollectUserDetails">
 
     <ScrollView android:layout_height="wrap_content"
@@ -57,7 +58,7 @@
                 android:textColor="#333"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:text="Primary Choice"/>
+                android:text="@string/primary_choice"/>
 
 
             <android.support.v4.view.ViewPager
@@ -97,7 +98,8 @@
                     android:textAlignment="center"
                     android:textSize="20sp"
                     android:hint="@string/first_name"
-                    android:backgroundTint="#33ddff"/>
+                    android:backgroundTint="#33ddff"
+                    tools:ignore="UnusedAttribute" />
                 <EditText
                     android:layout_marginStart="10dp"
                     android:layout_width="wrap_content"
@@ -108,7 +110,8 @@
                     android:textColor="#333"
                     android:textSize="20sp"
                     android:hint="@string/last_name"
-                    android:backgroundTint="#33ddff"/>
+                    android:backgroundTint="#33ddff"
+                    tools:ignore="UnusedAttribute" />
             </LinearLayout>
             <EditText
                 android:layout_marginTop="15dp"

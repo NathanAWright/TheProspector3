@@ -125,4 +125,5 @@
     <string name="first_name">First Name</string>
     <string name="last_name">Last Name</string>
     <string name="swipe_left">Swipe left.</string>
+    <string name="primary_choice">Primary Choice</string>
 </resources>
