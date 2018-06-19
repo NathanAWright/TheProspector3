@@ -17,6 +17,8 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Objects;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,8 +27,11 @@ public class RecMsg extends android.support.v4.app.Fragment {
     RelativeLayout layout;
     TextView conversationStartText, title, yesAnswer1, noAnswer1, yesAnswer2, noAnswer2, convoStart, responsesText, followUpRec, ifYes1, ifYes2, ifNo1, ifNo2, neitherOption, neitherOptionResponse;
     Button convoStarterBtn, yes1Btn, no1Btn, yes2Btn, no2Btn, neitherOptBtn;
+//    Context mContext;
+    private View view;
 
-
+    /*Context mContext*/
+//        this.mContext=mContext;
     public RecMsg() {
         // Required empty public constructor
     }
@@ -121,42 +126,88 @@ public class RecMsg extends android.support.v4.app.Fragment {
             ifNo1.setText("If the Prospect asks questions:");
             noAnswer1.setText(bundle.getString("questionsResponse"));
             no1Btn.setText("Copy Reply");
-            followUpRec.setVisibility(View.INVISIBLE);
+
+
+            ifNo2.setText("NB. MAKE SURE YOU EDIT ALL SQUARE BRACKETS.\nExample: \"[Person's Name]\" should be \"John\".");
+            ifNo2.setTextColor(Color.parseColor("#551111"));
             ifNo2.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+            neitherOptionResponse.setText("Happy Prospecting,\nMajor Pips out.");
+            neitherOptionResponse.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+            neitherOptionResponse.setVisibility(View.VISIBLE);
+            followUpRec.setVisibility(View.INVISIBLE);
             yes2Btn.setVisibility(View.INVISIBLE);
             no2Btn.setVisibility(View.INVISIBLE);
-            ifNo2.setVisibility(View.INVISIBLE);
-//            ifYes1.setVisibility(View.INVISIBLE);
             ifYes2.setVisibility(View.INVISIBLE);
         }
+
+        yes1Btn.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Objects.requireNonNull(getContext());
+                ClipboardManager clipboard = (ClipboardManager) Objects.requireNonNull(getActivity()).getSystemService(Context.CLIPBOARD_SERVICE);
+                android.content.ClipData clip = android.content.ClipData.newPlainText("Copied Text", yesAnswer1.getText().toString());
+                Objects.requireNonNull(clipboard).setPrimaryClip(clip);
+                Toast.makeText(Objects.requireNonNull(getActivity()).getApplicationContext(), "Copied!", Toast.LENGTH_SHORT).show();
+            }
+        });
+        yes2Btn.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+
+                Objects.requireNonNull(getContext());
+                ClipboardManager clipboard = (ClipboardManager) Objects.requireNonNull(getActivity()).getSystemService(Context.CLIPBOARD_SERVICE);
+                android.content.ClipData clip = android.content.ClipData.newPlainText("Copied Text", yesAnswer2.getText().toString());
+                Objects.requireNonNull(clipboard).setPrimaryClip(clip);
+                Toast.makeText(Objects.requireNonNull(getActivity()).getApplicationContext(), "Copied!", Toast.LENGTH_SHORT).show();
+            }
+        });
+        no1Btn.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Objects.requireNonNull(getContext());
+                ClipboardManager clipboard = (ClipboardManager) Objects.requireNonNull(getActivity()).getSystemService(Context.CLIPBOARD_SERVICE);
+                android.content.ClipData clip = android.content.ClipData.newPlainText("Copied Text", noAnswer1.getText().toString());
+                Objects.requireNonNull(clipboard).setPrimaryClip(clip);
+                Toast.makeText(Objects.requireNonNull(getActivity()).getApplicationContext(), "Copied!", Toast.LENGTH_SHORT).show();
+            }
+        });
+        no2Btn.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Objects.requireNonNull(getContext());
+                ClipboardManager clipboard = (ClipboardManager) Objects.requireNonNull(getActivity()).getSystemService(Context.CLIPBOARD_SERVICE);
+                android.content.ClipData clip = android.content.ClipData.newPlainText("Copied Text", noAnswer2.getText().toString());
+                Objects.requireNonNull(clipboard).setPrimaryClip(clip);
+                Toast.makeText(Objects.requireNonNull(getActivity()).getApplicationContext(), "Copied!", Toast.LENGTH_SHORT).show();
+            }
+        });
+        convoStarterBtn.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Objects.requireNonNull(getContext());
+                ClipboardManager clipboard = (ClipboardManager) Objects.requireNonNull(getActivity()).getSystemService(Context.CLIPBOARD_SERVICE);
+                android.content.ClipData clip = android.content.ClipData.newPlainText("Copied Text", convoStart.getText().toString());
+                Objects.requireNonNull(clipboard).setPrimaryClip(clip);
+                Toast.makeText(Objects.requireNonNull(getActivity()).getApplicationContext(), "Copied!", Toast.LENGTH_SHORT).show();
+            }
+        });
+        neitherOptBtn.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Objects.requireNonNull(getContext());
+                ClipboardManager clipboard = (ClipboardManager) Objects.requireNonNull(getActivity()).getSystemService(Context.CLIPBOARD_SERVICE);
+                android.content.ClipData clip = android.content.ClipData.newPlainText("Copied Text", neitherOptionResponse.getText().toString());
+                Objects.requireNonNull(clipboard).setPrimaryClip(clip);
+                Toast.makeText(Objects.requireNonNull(getActivity()).getApplicationContext(), "Copied!", Toast.LENGTH_SHORT).show();
+            }
+        });
         // Inflate the layout for this fragment
         return view;
-    }
-
-    public void copyConvoStart(View view) {
-//        ClipboardManager clipboard = (ClipboardManager) getActivity().getSystemService(getContext().CLIPBOARD_SERVICE);
-//        clipboard.setText(convoStart.getText().toString());
-//
-////        android.content.ClipData clip = android.content.ClipData.newPlainText("Copied Text", convoStart.getText().toString());
-////        clipboard.setPrimaryClip(clip);
-        Toast.makeText(getContext(), "Copied!", Toast.LENGTH_SHORT).show();
-    }
-
-    public void copyYes1Response(View view) {
-        Toast.makeText(getContext(), "Copied!", Toast.LENGTH_SHORT).show();
-    }
-
-    public void copyNo1Response(View view) {
-        Toast.makeText(getContext(), "Copied!", Toast.LENGTH_SHORT).show();
-    }
-
-    public void copyYes2Response(View view) {
-        Toast.makeText(getContext(), "Copied!", Toast.LENGTH_SHORT).show();
-    }
-    public void copyNo2Response(View view) {
-        Toast.makeText(getContext(), "Copied!", Toast.LENGTH_SHORT).show();
-    }
-    public void copyNeitherResponse(View view) {
-        Toast.makeText(getContext(), "Copied!", Toast.LENGTH_SHORT).show();
     }
 }

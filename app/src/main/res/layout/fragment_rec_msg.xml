@@ -48,7 +48,6 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text = "@string/copy_convo_starter"
-                android:onClick="copyConvoStart"
                 android:backgroundTint="#333"
                 android:layout_margin="10dp"
                 android:id="@+id/copyConvoStarterButton"
@@ -83,7 +82,6 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="5dp"
                 android:text = "@string/copy_yes_response"
-                android:onClick="copyYes1Response"
                 android:backgroundTint="#333"
                 android:id="@+id/copyYesResponse1Button"
                 tools:ignore="UnusedAttribute"/>
@@ -117,7 +115,6 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="5dp"
                 android:text = "@string/copy_no_response"
-                android:onClick="copyNo1Response"
                 android:backgroundTint="#333"
                 android:id="@+id/copyNoResponse1Button"
                 tools:ignore="UnusedAttribute"/>
@@ -143,7 +140,6 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="5dp"
                 android:text = "@string/copy_yes_response"
-                android:onClick="copyYes2Response"
                 android:backgroundTint="#333"
                 android:id="@+id/copyYes2Response1Button"
                 tools:ignore="UnusedAttribute"/>
@@ -169,7 +165,6 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="5dp"
                 android:text = "@string/copy_no_response"
-                android:onClick="copyNo2Response"
                 android:backgroundTint="#333"
                 android:id="@+id/copyNoResponse2Button"
                 tools:ignore="UnusedAttribute"/>
@@ -183,7 +178,7 @@
                 android:visibility="invisible"
                 android:id="@+id/neitherOption"/>
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
                 android:textIsSelectable="true"
@@ -196,7 +191,6 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="5dp"
                 android:text = "Copy 'Neither' Response"
-                android:onClick="copyNeitherResponse"
                 android:visibility="invisible"
                 android:backgroundTint="#333"
                 android:id="@+id/neitherOptionButton"
