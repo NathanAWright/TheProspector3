@@ -126,4 +126,17 @@
     <string name="last_name">Last Name</string>
     <string name="swipe_left">Swipe left.</string>
     <string name="primary_choice">Primary Choice</string>
+    <string name="recommended_messages">Recommended Messages</string>
+    <string name="title_activity_recommended_messages">RecommendedMessages</string>
+    <string name="back">Back</string>
+    <string name="copy_convo_starter">Copy Convo Starter</string>
+    <string name="responses">Responses:</string>
+    <string name="if_prospect_says_yes">If Prospect says \'Yes\':</string>
+    <string name="copy_yes_response">Copy \'Yes\' Response</string>
+    <string name="copy_no_response">Copy \'No\' Response</string>
+    <string name="if_prospect_says_no">If Prospect says \'No\':</string>
+    <string name="if_prospect_says_no_again">If Prospect says \'No\' again:</string>
+    <string name="conversation_start">Conversation Start:</string>
+    <string name="copy_messages">Copy Messages</string>
+    <string name="copy_follow_up">Copy Follow Up</string>
 </resources>

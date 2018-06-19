@@ -19,7 +19,7 @@ public class Settings extends Activity {
     Spinner sortOptionsSpinner;
     Adapter adapter;
     RelativeLayout checkboxes;
-    Button applyChangesBtn;
+    Button applyChangesBtn, recMessagesBtn;
     static boolean central=false, north=false, south=false, east=false, west=false, international=false, tobago=false, region=false, all=true, interestLevel=false, emailOnly=false, whatsappOnly=false, instagramOnly=false, phoneCallOnly=false, timesContacted=false;
 
     @Override
@@ -33,6 +33,7 @@ public class Settings extends Activity {
         sortOptionsSpinner.setAdapter((SpinnerAdapter) adapter);
         sortOptionsSpinner.setSelection(0);
         applyChangesBtn = findViewById(R.id.applyFilter);
+        recMessagesBtn = findViewById(R.id.recommendedMessagesButton);
 
         sortOptionsSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -54,6 +55,7 @@ public class Settings extends Activity {
                     emailOnly=true;
                 if (position==8) {
                     checkboxes.setVisibility(View.VISIBLE);
+                    recMessagesBtn.setVisibility(View.INVISIBLE);
                     region=true;
                 }else
                     checkboxes.setVisibility(View.INVISIBLE);
@@ -92,8 +94,10 @@ public class Settings extends Activity {
             phoneCallOnly=false;
         if (position!=7)
             emailOnly=false;
-        if (position!=8)
+        if (position!=8){
             region=false;
+            recMessagesBtn.setVisibility(View.VISIBLE);
+        }
     }
 
     public void deleteLingeringProspects(View view) {
@@ -133,5 +137,9 @@ public class Settings extends Activity {
     public void adminPage(View view) {
         startActivity(new Intent(this, AdministratorPage.class));
         finish();
+    }
+
+    public void viewRecommendedMessages(View view) {
+        startActivity(new Intent(this, RecommendedMessages.class));
     }
 }

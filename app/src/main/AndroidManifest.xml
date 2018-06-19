@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:installLocation="preferExternal"
     package="com.example.nathz.theprospector">
 
     <application
@@ -65,6 +66,10 @@
             android:name=".ProspectsRecToDelete"
             android:label="@string/title_activity_prospects_rec_to_delete"
             android:theme="@style/AppTheme.MainPopWindowStyle" />
+        <activity
+            android:name=".RecommendedMessages"
+            android:label="@string/title_activity_recommended_messages"
+            android:theme="@style/AppTheme.MainPopWindowStyle"></activity>
     </application>
 
 </manifest>

@@ -25,18 +25,33 @@
         android:layout_marginTop="150dp"
         android:textSize="15sp"
         android:textAlignment="center"
+        android:id="@+id/changeAdminInfoBtn"
         android:onClick="changeAdminInfo"
         android:text="@string/change_admin_info"
         android:backgroundTint="#66111fff"
+        tools:ignore="UnusedAttribute" />
+
+    <Button
+        android:id="@+id/recommendedMessagesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/sortOptionsSpinner"
+        android:backgroundTint="#66111fff"
+        android:onClick="viewRecommendedMessages"
+        android:text="@string/recommended_messages"
+        android:textAlignment="center"
+        android:textSize="15sp"
         tools:ignore="UnusedAttribute" />
 
     <Spinner
         android:id="@+id/sortOptionsSpinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="220dp"
+        android:layout_below="@id/changeAdminInfoBtn"
+        android:layout_marginTop="25dp"
         android:backgroundTint="#66111fff"
         android:textAlignment="center"
         tools:ignore="UnusedAttribute" />
