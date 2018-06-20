@@ -1,15 +1,13 @@
 package com.example.nathz.theprospector;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
-import android.graphics.PorterDuffColorFilter;
 import android.os.Bundle;
 import android.app.Activity;
 import android.os.Handler;
-import android.transition.Explode;
 import android.transition.Slide;
-import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.AlphaAnimation;
@@ -20,7 +18,6 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
 
 public class RateUserInterest extends Activity {
     TextView honestlyTextView, howInterestedTextView, seekBarProgress, willContactTextView;
@@ -74,6 +71,7 @@ public class RateUserInterest extends Activity {
 
         seekBar.setOnSeekBarChangeListener(
                 new SeekBar.OnSeekBarChangeListener() {
+                    @SuppressLint("SetTextI18n")
                     @Override
                     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                         seekBarProgress.setText(progress+"/"+seekBar.getMax());
@@ -87,6 +85,7 @@ public class RateUserInterest extends Activity {
                         nextButton.setVisibility(View.VISIBLE);
                     }
 
+                    @SuppressLint("SetTextI18n")
                     @Override
                     public void onStopTrackingTouch(SeekBar seekBar) {
                         seekBarProgress.setText(seekBar.getProgress()+"/"+seekBar.getMax());
@@ -97,11 +96,11 @@ public class RateUserInterest extends Activity {
     }
     public void setComment(int position){
         if (position>=0 && position <4)
-            willContactTextView.setText("May not be contacted.");
+            willContactTextView.setText(R.string.may_not_be_contacted);
         if (position>=4 && position <7)
-            willContactTextView.setText("Likely to be contacted.");
+            willContactTextView.setText(R.string.likely_to_be_contacted);
         if (position>=7 && position <=10)
-            willContactTextView.setText("Will definitely be contacted.");
+            willContactTextView.setText(R.string.will_definitely_be_contacted);
     }
 
     public void enterUserDetailsScreen(View view) {

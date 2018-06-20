@@ -69,7 +69,7 @@
         <activity
             android:name=".RecommendedMessages"
             android:label="@string/title_activity_recommended_messages"
-            android:theme="@style/AppTheme.MainPopWindowStyle"></activity>
+            android:theme="@style/AppTheme.MainPopWindowStyle" />
     </application>
 
 </manifest>

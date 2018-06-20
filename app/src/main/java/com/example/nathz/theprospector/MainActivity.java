@@ -1,5 +1,6 @@
 package com.example.nathz.theprospector;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -14,16 +15,13 @@ import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
 import java.util.ArrayList;
-import java.util.Set;
 
 public class MainActivity extends Activity {
     TextView mpCountDown1, mpCountDown2, mpCountDown3, mpCountDownMp;
@@ -38,6 +36,7 @@ public class MainActivity extends Activity {
     Administrator admin;
     static String phone, email, whatsapp, instagram;
     static String north, south, east, west, international, central, tobago;
+    @SuppressLint("StaticFieldLeak")
     static Context context;
 
     @Override

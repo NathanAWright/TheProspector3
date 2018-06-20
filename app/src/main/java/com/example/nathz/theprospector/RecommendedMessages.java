@@ -1,7 +1,6 @@
 package com.example.nathz.theprospector;
 
 import android.os.Bundle;
-import android.app.Activity;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.util.DisplayMetrics;

@@ -23,7 +23,7 @@
     <string name="honestly">Honestly.</string>
     <string name="title_activity_collect_user_details">CollectUserDetails</string>
     <string name="preferred_form_of_contact">Preferred form of contact:</string>
-    <string name="swipe_for_more">Swipe for more options.</string>
+    <string name="swipe_for_more_options">Swipe for more options.</string>
     <string name="phone_number">Phone Number</string>
     <string name="whatsapp_number">Whatsapp Number</string>
     <string name="instagram_username">IG Username</string>
@@ -61,7 +61,7 @@
     <string name="make_final_offer">Make Final Offer.</string>
     <string name="delete_prospect">Delete Prospect.</string>
     <string-array name="prospectListSortOptions">
-        <item>"Sort prospects by ..."</item>
+        <item>"Sort prospects by …"</item>
         <item>Show all prospects</item>
         <item>Interest Level</item>
         <item>No. of times contacted</item>
@@ -139,4 +139,22 @@
     <string name="conversation_start">Conversation Start:</string>
     <string name="copy_messages">Copy Messages</string>
     <string name="copy_follow_up">Copy Follow Up</string>
+    <string name="copy_neither_response">Copy \'Neither\' Response</string>
+    <string name="if_prospect_says_neither">If Prospect says \'Neither\':</string>
+    <string name="a_follow_up_is_recommended">(A follow up is recommended. If the prospect changes their mind send the \'No\' response)</string>
+    <string name="copy_reply">Copy Reply</string>
+    <string name="If_the_Prospect_asks_questions">If the Prospect asks questions:</string>
+    <string name="please_delete_your_prospect">Please DELETE YOUR PROSPECT after this step.</string>
+    <string name="recordings_follow_up">Recordings Follow Up:</string>
+    <string name="physical_presentation_follow_up">Physical Presentation Follow Up:</string>
+    <string name="follow_up_messages">Follow Up Messages:</string>
+    <string name="copy_recordings_response">Copy \'Recordings\' Response</string>
+    <string name="copy_live_presentation_response">Copy \'Live Presentation\' Response</string>
+    <string name="if_prospect_asks_for_recordings_link">If prospect asks for recordings link:</string>
+    <string name="if_prospect_asks_for_live_presentation">If prospect asks for live presentation:</string>
+    <string name="may_not_be_contacted">May not be contacted.</string>
+    <string name="likely_to_be_contacted">Likely to be contacted.</string>
+    <string name="will_definitely_be_contacted">Will definitely be contacted.</string>
+    <string name="_prospects_question_mark">prospects?</string>
+    <string name="swipe_for_more">Swipe for more</string>
 </resources>

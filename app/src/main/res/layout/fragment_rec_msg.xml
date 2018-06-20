@@ -92,7 +92,7 @@
                 android:layout_margin="5dp"
                 android:id="@+id/followUpRec"
                 android:gravity="center_horizontal"
-                android:text="(A follow up is recommended. If the prospect changes their mind send the 'No' response)"/>
+                android:text="@string/a_follow_up_is_recommended"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -174,7 +174,7 @@
                 android:layout_margin="5dp"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:text="If Prospect says 'Neither':"
+                android:text="@string/if_prospect_says_neither"
                 android:visibility="invisible"
                 android:id="@+id/neitherOption"/>
             <TextView
@@ -190,7 +190,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="5dp"
-                android:text = "Copy 'Neither' Response"
+                android:text = "@string/copy_neither_response"
                 android:visibility="invisible"
                 android:backgroundTint="#333"
                 android:id="@+id/neitherOptionButton"

@@ -7,7 +7,6 @@ public class Administrator extends Application implements Serializable {
     public static boolean loggedIn=false, adminCreated=false;
     public static String userNameOfficial="", passwordOfficial="";
     public String userName, password;
-//    public static Context context;
 
     Administrator(String userName, String password){
         this.userName=userName;

@@ -1,5 +1,6 @@
 package com.example.nathz.theprospector;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -94,6 +95,7 @@ public class ProspectsRecToDelete extends Activity {
         startActivity(new Intent(this, Settings.class));
     }
 
+    @SuppressLint("SetTextI18n")
     public ArrayList<String> getRecommendedDeletes(){
         ArrayList<String> recommendedToDelete = new ArrayList<>();
         for (User prospect: User.usersArrayList)
@@ -110,13 +112,13 @@ public class ProspectsRecToDelete extends Activity {
             title.setText(R.string.delete_prospect_query);
             title.setTextColor(Color.parseColor("#660000"));
         }else
-            titleExt.setText(recommendedToDelete.size()+" prospects?");
+            titleExt.setText(recommendedToDelete.size()+getString(R.string._prospects_question_mark));
         return recommendedToDelete;
     }
 
     private SwipeMenuCreator createSwipeMenuFormat() {
 
-        SwipeMenuCreator creator = new SwipeMenuCreator() {
+        return new SwipeMenuCreator() {
             @Override
             public void create(SwipeMenu menu) {
                 SwipeMenuItem showInterestLevel = new SwipeMenuItem(
@@ -140,7 +142,6 @@ public class ProspectsRecToDelete extends Activity {
 
             }
         };
-        return creator;
     }
     private void showInterestLevel(int position) {
 

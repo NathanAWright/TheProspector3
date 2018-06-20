@@ -1,15 +1,13 @@
 package com.example.nathz.theprospector;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
-import android.view.View;
 
 public class RecMsgSwipeAdapter extends FragmentStatePagerAdapter{
 
-    public RecMsgSwipeAdapter(FragmentManager fm) {
+    RecMsgSwipeAdapter(FragmentManager fm) {
         super(fm);
     }
 

@@ -7,8 +7,7 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.app.Fragment;
-import android.util.TypedValue;
-import android.view.Gravity;
+import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,18 +26,14 @@ public class RecMsg extends android.support.v4.app.Fragment {
     RelativeLayout layout;
     TextView conversationStartText, title, yesAnswer1, noAnswer1, yesAnswer2, noAnswer2, convoStart, responsesText, followUpRec, ifYes1, ifYes2, ifNo1, ifNo2, neitherOption, neitherOptionResponse;
     Button convoStarterBtn, yes1Btn, no1Btn, yes2Btn, no2Btn, neitherOptBtn;
-//    Context mContext;
-    private View view;
 
-    /*Context mContext*/
-//        this.mContext=mContext;
     public RecMsg() {
         // Required empty public constructor
     }
 
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_rec_msg, container, false);
         title = view.findViewById(R.id.title);
@@ -84,22 +79,22 @@ public class RecMsg extends android.support.v4.app.Fragment {
         noAnswer2.setText(bundle.getString("noAnswer2"));
 
         if (title.getText().toString().equals("Second Chance")){
-            ifYes2.setText("If prospect asks for live presentation:");
-            ifNo2.setText("If prospect asks for recordings link:");
+            ifYes2.setText(R.string.if_prospect_asks_for_live_presentation);
+            ifNo2.setText(R.string.if_prospect_asks_for_recordings_link);
             yesAnswer2.setText(bundle.getString("livePresentationResponse"));
             noAnswer2.setText(bundle.getString("recordingsResponse"));
             neitherOption.setVisibility(View.VISIBLE);
             neitherOptBtn.setVisibility(View.VISIBLE);
             neitherOptionResponse.setText(bundle.getString("neitherResponse"));
-            yes2Btn.setText("Copy 'Live Presentation' Response");
+            yes2Btn.setText(R.string.copy_live_presentation_response);
             yes2Btn.setWidth(0);
-            no2Btn.setText("Copy 'Recordings' Response");
+            no2Btn.setText(R.string.copy_recordings_response);
         }
         if (title.getText().toString().equals("Final Offer\n(Online Presentation)")){
             yesAnswer1.setText(bundle.getString("followUpText"));
             followUpRec.setVisibility(View.INVISIBLE);
             followUpRec.setTextSize(1);
-            responsesText.setText("Follow Up Messages:");
+            responsesText.setText(R.string.follow_up_messages);
             ifNo2.setText("This is the final follow up.\nPlease DELETE YOUR PROSPECT after this step.");
             ifNo2.setTextColor(Color.parseColor("#551111"));
             ifNo2.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
@@ -113,19 +108,19 @@ public class RecMsg extends android.support.v4.app.Fragment {
         }
         if (title.getText().toString().equals("Extras")){
             convoStart.setText(bundle.getString("physPresentationFollowUpText"));
-            conversationStartText.setText("Physical Presentation Follow Up:");
+            conversationStartText.setText(R.string.physical_presentation_follow_up);
             convoStarterBtn.setText(R.string.copy_follow_up);
             yesAnswer1.setText(bundle.getString("followUpText"));
             yesAnswer1.setText(bundle.getString("recordingsFollowUpText"));
-            responsesText.setText("Recordings Follow Up:");
+            responsesText.setText(R.string.recordings_follow_up);
             yes1Btn.setText(R.string.copy_follow_up);
-            ifYes1.setText("Please DELETE YOUR PROSPECT after this step.");
+            ifYes1.setText(R.string.please_delete_your_prospect);
             ifYes1.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
             ifYes1.setTextColor(Color.parseColor("#551111"));
             ifYes1.setTextSize(16);
-            ifNo1.setText("If the Prospect asks questions:");
+            ifNo1.setText(R.string.If_the_Prospect_asks_questions);
             noAnswer1.setText(bundle.getString("questionsResponse"));
-            no1Btn.setText("Copy Reply");
+            no1Btn.setText(R.string.copy_reply);
 
 
             ifNo2.setText("NB. MAKE SURE YOU EDIT ALL SQUARE BRACKETS.\nExample: \"[Person's Name]\" should be \"John\".");

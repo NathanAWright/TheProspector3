@@ -196,5 +196,5 @@
         android:text="@string/delete_recommended_prospects"
         android:textAlignment="center"
         android:textSize="15sp"
-        tools:ignore="UnusedAttribute" />
+        tools:ignore="RelativeOverlap,UnusedAttribute" />
 </RelativeLayout>

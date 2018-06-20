@@ -1,20 +1,16 @@
 package com.example.nathz.theprospector;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.io.FileOutputStream;
-import java.io.ObjectOutputStream;
 
 public class ChangeAdminInfo extends Activity {
     EditText userNameEt, password1, password2;
@@ -22,6 +18,7 @@ public class ChangeAdminInfo extends Activity {
     TextView welcomeText;
     ImageView showPassword1, showPassword2;
     int passwordType;
+    @SuppressLint("StaticFieldLeak")
     public static Context context;
 
     @Override

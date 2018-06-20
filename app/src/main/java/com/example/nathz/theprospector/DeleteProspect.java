@@ -6,7 +6,6 @@ import android.app.Activity;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class DeleteProspect extends Activity {
     int pos=-1;

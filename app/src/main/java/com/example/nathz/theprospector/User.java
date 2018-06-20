@@ -1,19 +1,13 @@
 package com.example.nathz.theprospector;
 
+import android.annotation.SuppressLint;
 import android.app.Application;
 import android.content.Context;
-import android.util.Log;
-import android.widget.Toast;
-
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 
 public class User extends Application implements Serializable{
+    @SuppressLint("StaticFieldLeak")
     private static Context mContext;
     public static int idCounter=0;
     public static ArrayList<User> usersArrayList = new ArrayList<>();
@@ -29,7 +23,7 @@ public class User extends Application implements Serializable{
         return recommendation;
     }
 
-    public String recommendation;
+    public transient String recommendation;
     public int interestLevel, id, timesContacted;
     static ArrayList<String> basicProspectInfo=new ArrayList<>();
 
@@ -59,9 +53,6 @@ public class User extends Application implements Serializable{
             this.secContactData = secContactData;
     }
 
-    public void contactUser(){
-        this.timesContacted++;
-    }
     public void setRecommendation(String r){
         this.recommendation=r;
     }

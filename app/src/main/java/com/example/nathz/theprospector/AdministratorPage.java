@@ -1,45 +1,35 @@
 package com.example.nathz.theprospector;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
-import android.database.DataSetObserver;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.app.Activity;
 import android.transition.Slide;
-import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.BounceInterpolator;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
-import android.widget.ListView;
-import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
-
-//import com.baoyz.swipemenulistview.SwipeMenu;
-//import com.baoyz.swipemenulistview.SwipeMenuCreator;
-//import com.baoyz.swipemenulistview.SwipeMenuItem;
-//import com.baoyz.swipemenulistview.SwipeMenuListView;
-
 import com.baoyz.swipemenulistview.SwipeMenu;
 import com.baoyz.swipemenulistview.SwipeMenuCreator;
 import com.baoyz.swipemenulistview.SwipeMenuItem;
 import com.baoyz.swipemenulistview.SwipeMenuListView;
-
 import java.io.Serializable;
-import java.security.cert.CollectionCertStoreParameters;
+import java.util.Locale;
 
 public class AdministratorPage extends Activity implements Serializable {
     public String userName, password;
     SwipeMenuListView prospectList;
-//    ListView prospectList;
     ListAdapter adapter;
     TextView prospectCount;
+    @SuppressLint("StaticFieldLeak")
     public static Context context;
 
     @Override
@@ -142,7 +132,7 @@ public class AdministratorPage extends Activity implements Serializable {
         }
 
         if (user.timesContacted>1)
-            Toast.makeText(this, String.format("%s %s %d %s", user.firstName, getString(R.string._contacted), user.timesContacted, getString(R.string.times)), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, String.format(Locale.ENGLISH,"%s %s %d %s", user.firstName, getString(R.string._contacted), user.timesContacted, getString(R.string.times)), Toast.LENGTH_SHORT).show();
         else
             Toast.makeText(this, String.format("%s %s", user.firstName, getString(R.string._contacted)), Toast.LENGTH_SHORT).show();
         CollectUserDetails.serialiseUsers(this);
@@ -150,7 +140,7 @@ public class AdministratorPage extends Activity implements Serializable {
 
     private SwipeMenuCreator createSwipeMenuFormat() {
 
-        SwipeMenuCreator creator = new SwipeMenuCreator() {
+        return new SwipeMenuCreator() {
 
             @Override
             public void create(SwipeMenu menu) {
@@ -205,7 +195,6 @@ public class AdministratorPage extends Activity implements Serializable {
 
             }
         };
-        return creator;
     }
 
     public void logOut(View view) {

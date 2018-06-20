@@ -1,31 +1,25 @@
 package com.example.nathz.theprospector;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.app.Activity;
-import android.os.Handler;
 import android.support.v4.view.ViewPager;
 import android.transition.Slide;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.ViewFlipper;
 
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
@@ -41,6 +35,7 @@ public class CollectUserDetails extends Activity {
     LinearLayout submitButtons;
     String []intentData={""};
     int primaryPreference=0, secondaryPreference=0;
+    @SuppressLint("StaticFieldLeak")
     static Context context;
     static boolean isNewEntry=false, tryNewEntry=false;
 
@@ -85,7 +80,7 @@ public class CollectUserDetails extends Activity {
         ImageAdapter imageAdapter = new ImageAdapter(this);
         viewPager1.setAdapter(imageAdapter);
         viewPager2.setAdapter(imageAdapter);
-        Toast.makeText(this, R.string.swipe_for_more, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, R.string.swipe_for_more_options, Toast.LENGTH_SHORT).show();
 
         Intent userDataIntent = getIntent();
         intentData = userDataIntent.getStringArrayExtra("userData");
@@ -151,16 +146,16 @@ public class CollectUserDetails extends Activity {
 
     public void setContactText(TextView textView, EditText et, int inputType, int position) {
         if (position == 0){
-            textView.setText("Swipe for more");
+            textView.setText(R.string.swipe_for_more);
             et.setVisibility(View.INVISIBLE);
         }if (position == 1)
-            textView.setText("Phone Call");
+            textView.setText(R.string.phone_call);
         if (position == 2)
-            textView.setText("Whatsapp");
+            textView.setText(R.string.whatsapp);
         if (position == 3)
-            textView.setText("Instagram");
+            textView.setText(R.string.instagram);
         if (position == 4)
-            textView.setText("Email");
+            textView.setText(R.string.email);
 
         if (position > 0) {
             et.setVisibility(View.VISIBLE);
